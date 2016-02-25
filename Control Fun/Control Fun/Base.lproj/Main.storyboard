@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,13 +17,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2uP-98-URZ">
-                                <rect key="frame" x="214" y="10" width="172" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2uP-98-URZ">
+                                <rect key="frame" x="214" y="20" width="172" height="80"/>
                             </imageView>
+                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pcY-Ga-7Jc">
+                                <rect key="frame" x="128" y="134" width="456" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKB-MT-Cpj">
+                                <rect key="frame" x="16" y="138" width="51" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="4td-Nc-EE6"/>
+                                    <constraint firstAttribute="height" constant="21" id="7er-5J-esd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvh-ye-zEG">
+                                <rect key="frame" x="16" y="185" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GgX-E7-sNO">
+                                <rect key="frame" x="128" y="182" width="456" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="GgX-E7-sNO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7ZT-LW-6IK"/>
+                            <constraint firstItem="dvh-ye-zEG" firstAttribute="width" secondItem="CKB-MT-Cpj" secondAttribute="width" id="89d-w4-zMC"/>
+                            <constraint firstItem="dvh-ye-zEG" firstAttribute="top" secondItem="CKB-MT-Cpj" secondAttribute="bottom" constant="26" id="AIy-ni-XDI"/>
+                            <constraint firstItem="pcY-Ga-7Jc" firstAttribute="top" secondItem="2uP-98-URZ" secondAttribute="bottom" constant="34" id="Das-Ui-RTm"/>
+                            <constraint firstItem="dvh-ye-zEG" firstAttribute="baseline" secondItem="GgX-E7-sNO" secondAttribute="baseline" id="Hxu-Xp-Gbh"/>
+                            <constraint firstItem="2uP-98-URZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="M2W-QZ-Tnt"/>
+                            <constraint firstItem="GgX-E7-sNO" firstAttribute="trailing" secondItem="pcY-Ga-7Jc" secondAttribute="trailing" id="Te5-Nx-FGb"/>
                             <constraint firstAttribute="centerX" secondItem="2uP-98-URZ" secondAttribute="centerX" id="bII-qw-D05"/>
+                            <constraint firstItem="dvh-ye-zEG" firstAttribute="leading" secondItem="CKB-MT-Cpj" secondAttribute="leading" id="gei-4m-5Mq"/>
+                            <constraint firstItem="CKB-MT-Cpj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hP3-xZ-YLs"/>
+                            <constraint firstItem="CKB-MT-Cpj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="118" id="m9Q-SA-0w0"/>
+                            <constraint firstItem="GgX-E7-sNO" firstAttribute="top" secondItem="pcY-Ga-7Jc" secondAttribute="bottom" constant="18" id="o1L-Pf-NS0"/>
+                            <constraint firstItem="GgX-E7-sNO" firstAttribute="leading" secondItem="dvh-ye-zEG" secondAttribute="trailing" constant="8" symbolic="YES" id="xjM-um-0Ew"/>
+                            <constraint firstItem="GgX-E7-sNO" firstAttribute="leading" secondItem="pcY-Ga-7Jc" secondAttribute="leading" id="yC4-kr-oXO"/>
                         </constraints>
                     </view>
                 </viewController>
