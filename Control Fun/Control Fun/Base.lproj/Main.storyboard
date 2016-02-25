@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -24,6 +24,9 @@
                                 <rect key="frame" x="128" y="134" width="456" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="43K-ug-VlU"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKB-MT-Cpj">
                                 <rect key="frame" x="16" y="138" width="51" height="21"/>
@@ -45,6 +48,9 @@
                                 <rect key="frame" x="128" y="182" width="456" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="IhX-pr-Ep3"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -64,7 +70,14 @@
                             <constraint firstItem="GgX-E7-sNO" firstAttribute="leading" secondItem="dvh-ye-zEG" secondAttribute="trailing" constant="8" symbolic="YES" id="xjM-um-0Ew"/>
                             <constraint firstItem="GgX-E7-sNO" firstAttribute="leading" secondItem="pcY-Ga-7Jc" secondAttribute="leading" id="yC4-kr-oXO"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="BYZ-38-t0r" eventType="touchDown" id="MiV-Sa-cMC"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="pcY-Ga-7Jc" id="nih-VE-FWt"/>
+                        <outlet property="numberField" destination="GgX-E7-sNO" id="fs7-pJ-jwJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
